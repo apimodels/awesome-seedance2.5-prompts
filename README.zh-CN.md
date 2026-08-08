@@ -2,7 +2,7 @@
 
 [![画廊](https://img.shields.io/badge/9%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
 [![一个 API](https://img.shields.io/badge/一个%20API-85%2B%20模型-3158E8)](https://apimodels.app/zh/models)
-[![Seedance 2.0](https://img.shields.io/badge/Seedance%202.0%20已上线-%240.044%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.0)
+[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.134%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 精选 **Seedance 2.5 视频提示词**——每条都配上它真实生成的那段成片，署名作者并链回原帖。
@@ -20,7 +20,7 @@
 | | Seedance 2.5 | Seedance 2.0（对照） |
 |---|---|---|
 | 单次生成时长 | **30 秒** | 4–15 秒 |
-| 分辨率 | **原生 4K、10-bit**（不是放大） | 官方渠道上限 1080p |
+| 分辨率 | API 上是 **480p / 720p**（公布的原生 4K 10-bit 并未开放） | 官方渠道上限 1080p |
 | 单次参考素材 | **最多 50 份** | 最多 9 张图 + 参考视频 + 参考音频 |
 | — 图片 | 最多 30 张，单张 ≤ 4K | 9 张 |
 | — 视频 / 音频 | 各最多 10 段，各自总时长 ≤ 30 秒 | 各 1 段 |
@@ -185,11 +185,19 @@
 
 ## 在哪能跑这些提示词
 
-**Seedance 2.5 目前还不能通过 apimodels.app 的 API 调用——与其给你一个点了生成就报错的页面，
-不如直说。** 2026 年 8 月 4 日探我们生产用的火山方舟账户，所有 Seedance 2.5 的 model id
-都返回 `InvalidEndpointOrModel.NotFound`，而同样的请求打 Seedance 2.0 能正常返回任务 id。
-我们会持续复查，开放当天就上架，状态页在这里：
-**[/access/seedance-2-5-api](https://apimodels.app/zh/access/seedance-2-5-api)**。
+**Seedance 2.5 已在 apimodels.app 上线**，模型名 `seedance-2.5`，480p **$0.134/秒**起、
+720p $0.300/秒——一个 API Key 即可，无需火山账号、无需企业认证。单次出片 4–30 秒，
+一个任务最多 50 份参考素材（30 图 + 10 视频 + 10 音频），并新增视频编辑与视频续写。
+
+有两点各家报道容易搞错，这里直说：
+
+- **API 上只有 480p 和 720p。** 上面表格里那个「原生 4K、10-bit」是字节在 FORCE 发布会
+  公布的口径，API 并没有暴露这一档。今天要 1080p 或 4K，请用
+  [Seedance 2.0](https://apimodels.app/zh/models/seedance-2.0)。
+- **带参考视频不等于更便宜。** 编辑或续写按「源片秒数 + 输出秒数」计费，所以把一段素材
+  改成等长的成片，比直接生成同样长度贵约 20–25%。
+
+文档：**[/docs/seedance-2-5](https://apimodels.app/zh/docs/seedance-2-5)**
 
 今天，本库这些作者是在**即梦（Dreamina）**和 **Higgsfield** 上跑的 2.5。
 
@@ -200,7 +208,7 @@
 | **[Seedance 2.0](https://apimodels.app/zh/models/seedance-2.0)** | **$0.092** / 秒 | 火山方舟官方直连：9 张参考图 + 参考视频 + 参考音频，原生同步音频 |
 | [Seedance 2.0 Fast](https://apimodels.app/zh/models/seedance-2.0-fast) | **$0.071** / 秒 | 能力相同的速度/成本档 |
 | [Seedance 2.0 Mini](https://apimodels.app/zh/models/seedance-2.0-mini) | **$0.044** / 秒 | 最便宜的 Seedance 档位 |
-| [Dreamina Seedance 2.0](https://apimodels.app/zh/models/dreamina-seedance-2-0) | 按秒 | BytePlus 国际版官方端点，原生最高 4K 10-bit |
+| [Dreamina Seedance 2.0](https://apimodels.app/zh/models/dreamina-seedance-2-0) | 按秒 | 国际线，原生最高 4K |
 | **[MiniMax H3](https://apimodels.app/zh/models/minimax-h3)** | **$0.145** / 秒 | 原生 2K + 同步音频，9 图 + 3 视频 + 3 音频 |
 | **[Kling V3](https://apimodels.app/zh/models/kling-v3)** | **$0.12** / 秒 | 3–15 秒，文生/图生视频，可选音频 |
 | [VEO 3.1](https://apimodels.app/zh/models/veo-3.1) | 按条 | 高端标准档 |

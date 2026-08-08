@@ -2,7 +2,7 @@
 
 [![Gallery](https://img.shields.io/badge/Browse%209%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
 [![One API](https://img.shields.io/badge/One%20API-85%2B%20models-3158E8)](https://apimodels.app/models)
-[![Seedance 2.0](https://img.shields.io/badge/Seedance%202.0%20live-from%20%240.044%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.0)
+[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.134%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A curated library of **Seedance 2.5 video prompts** — every one shown next to the clip it
@@ -22,7 +22,7 @@ By ByteDance's announced figures:
 | | Seedance 2.5 | Seedance 2.0 (for comparison) |
 |---|---|---|
 | Length in one pass | **30 s** | 4–15 s |
-| Resolution | **native 4K, 10-bit** (not an upscale) | up to 1080p on the official channel |
+| Resolution | **480p / 720p** on the API (the announced native 4K 10-bit is not exposed) | up to 1080p on the official channel |
 | Reference assets per job | **up to 50** | up to 9 images + video + audio |
 | — images | up to 30, each ≤ 4K | 9 |
 | — video / audio | up to 10 clips each, 30 s total each | 1 video + 1 audio |
@@ -206,12 +206,21 @@ demonstration of what 30 seconds costs you in writing.
 
 ## Where to run these prompts
 
-**Seedance 2.5 is not callable through the apimodels.app API yet, and we would rather say so
-than sell you a page that errors on generate.** Probing our production Volcengine Ark account
-on 4 August 2026, every Seedance 2.5 model id returned `InvalidEndpointOrModel.NotFound`,
-while the same request against Seedance 2.0 returned a task id. We re-check regularly and
-will list it the day it opens — status page:
-**[/access/seedance-2-5-api](https://apimodels.app/access/seedance-2-5-api)**.
+**Seedance 2.5 is live on apimodels.app** as the model `seedance-2.5`, from **$0.134/s**
+at 480p and $0.300/s at 720p — one API key, no Volcengine account and no enterprise
+verification. It generates 4-30 seconds in a single pass, takes up to 50 reference assets
+(30 images + 10 videos + 10 audios), and adds video editing and video extension.
+
+Two things the launch coverage gets wrong, so they are worth stating plainly:
+
+- **The API is 480p and 720p only.** The "native 4K, 10-bit" figure above is what ByteDance
+  announced at FORCE; it is not a resolution the API exposes. If you need 1080p or 4K today,
+  use [Seedance 2.0](https://apimodels.app/models/seedance-2.0).
+- **Reference-video jobs are not cheaper.** Editing or extending a clip bills on
+  (source seconds + output seconds), so turning a clip into an output of the same length
+  costs about 20-25% more than generating that length outright.
+
+Docs: **[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)**
 
 Today, the creators in this library run 2.5 in **Dreamina (Jimeng)** and **Higgsfield**.
 
@@ -223,7 +232,7 @@ migrating to 2.5 when it opens is a one-string change:
 | **[Seedance 2.0](https://apimodels.app/models/seedance-2.0)** | **$0.092** / s | ByteDance official Ark: 9 reference images + reference video + audio, native synced audio |
 | [Seedance 2.0 Fast](https://apimodels.app/models/seedance-2.0-fast) | **$0.071** / s | Same capability, speed/cost tier |
 | [Seedance 2.0 Mini](https://apimodels.app/models/seedance-2.0-mini) | **$0.044** / s | Cheapest Seedance tier |
-| [Dreamina Seedance 2.0](https://apimodels.app/models/dreamina-seedance-2-0) | per second | Official BytePlus international endpoint, native up to 4K 10-bit |
+| [Dreamina Seedance 2.0](https://apimodels.app/models/dreamina-seedance-2-0) | per second | International line, native up to 4K 10-bit |
 | **[MiniMax H3](https://apimodels.app/models/minimax-h3)** | **$0.145** / s | Native 2K + synced audio, 9 ref images + 3 videos + 3 audio |
 | **[Kling V3](https://apimodels.app/models/kling-v3)** | **$0.12** / s | 3–15 s, text- and image-to-video, optional audio |
 | [VEO 3.1](https://apimodels.app/models/veo-3.1) | per clip | Premium standard tier |
