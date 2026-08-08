@@ -1,6 +1,6 @@
 # Awesome Seedance 2.5 Prompts · Seedance 2.5 提示词库
 
-[![画廊](https://img.shields.io/badge/9%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
+[![画廊](https://img.shields.io/badge/95%2B%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
 [![一个 API](https://img.shields.io/badge/一个%20API-85%2B%20模型-3158E8)](https://apimodels.app/zh/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.134%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

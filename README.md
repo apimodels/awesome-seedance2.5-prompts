@@ -1,6 +1,6 @@
 # Awesome Seedance 2.5 Prompts
 
-[![Gallery](https://img.shields.io/badge/Browse%209%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
+[![Gallery](https://img.shields.io/badge/Browse%2095%2B%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
 [![One API](https://img.shields.io/badge/One%20API-85%2B%20models-3158E8)](https://apimodels.app/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.134%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
