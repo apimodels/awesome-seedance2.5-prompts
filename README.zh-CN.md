@@ -3,6 +3,7 @@
 [![画廊](https://img.shields.io/badge/95%2B%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
 [![一个 API](https://img.shields.io/badge/一个%20API-85%2B%20模型-3158E8)](https://apimodels.app/zh/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.134%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
+[![参考图](https://img.shields.io/badge/参考图-%240.008%2F张起-8b5cf6)](#参考图总得先有)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 精选 **Seedance 2.5 视频提示词**——每条都配上它真实生成的那段成片，署名作者并链回原帖。
@@ -30,8 +31,9 @@
 字节还为它发布了一份**官方提示词指南**，由训练这个模型的人写的。我们整理过完整的英文版：
 **[Seedance 2.5 官方提示词指南](https://apimodels.app/zh/blog/seedance-2-5-prompting-guide)**。
 
-> **关于出处。** 上表是字节公布的数字，不是我们的实测——我们目前还调不到 2.5
-> （见[在哪能跑](#在哪能跑这些提示词)），所以不会把「公布的规格」当成「测过的规格」讲。
+> **关于出处。** 上表是字节公布的数字。我们自己在正式接口上跑过的部分会明确标成实测——
+> 下面[在哪能跑](#在哪能跑这些提示词)里「只有 480p / 720p」和那两条计费口径，是我们
+> 2026 年 8 月 8 日实测的结论。公布的规格和测过的规格，这里一直分开讲。
 
 ---
 
@@ -201,7 +203,7 @@
 
 今天，本库这些作者是在**即梦（Dreamina）**和 **Higgsfield** 上跑的 2.5。
 
-而现在就能通过我们调用的（同一个端点、同一把 key，等 2.5 开放时迁移只改一个字符串）：
+同一个端点、同一把 key 还能调的其它视频模型（换模型只改 model 这一个字符串）：
 
 | 模型 | 起价 | 是什么 |
 |---|---|---|
@@ -216,6 +218,50 @@
 按量计费、无订阅、**注册送 $1**，且只对成功请求扣费。全部模型：
 **[apimodels.app/models](https://apimodels.app/zh/models)** ·
 接口文档：**[apimodels.app/docs/video](https://apimodels.app/zh/docs/video)**
+
+### 参考图总得先有
+
+Seedance 2.5 单个任务最多吃 **30 张参考图**，而本库大半的提示词都压在这上面：一套不能漂
+的服装、一件必须自始至终是同一件的产品、一个镜头不许拍穿帮的场景。这些板子说到底就是图，
+同一把 key、同一个域名就能生成。下面是每张图的价格，按原生 1K / 2K / 4K 分档——中间没有
+任何放大器，且只有出图成功才扣费。
+
+| 模型 | 调用名 | 1K | 2K | 4K |
+|---|---|---|---|---|
+| **[GPT Image 2](https://apimodels.app/zh/models/gpt-image-2)** | `gpt-image-2` | **$0.025** | $0.03 | $0.05 |
+| [GPT Image 2 Lite](https://apimodels.app/zh/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.008** | $0.015 | $0.025 |
+| **[Nano Banana Pro](https://apimodels.app/zh/models/nanobananapro)**（Gemini 3 Pro Image） | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
+| [Nano Banana 2](https://apimodels.app/zh/models/nanobanana2)（Gemini 3.1 Flash Image） | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
+
+> **人脸是例外，这条最好在花钱之前就知道。**
+> 火山对每一张直接传给 Seedance 的 `http(s)` 原图都会在**建任务的那一刻**过审，判定像真人
+> 就直接拒。2026 年 8 月 8 日我们在 2.5 上又撞了一次——用的还是字节自己文档里的示例图当
+> 首帧——任务在排队之前就被打回，所以不花钱，但也什么都没拿到。虚构的、非真实的人物正常
+> 通过。要指定**某个真人**，先把这张人像注册进素材库，然后传它的 `asset://` id，而不是 URL。
+>
+> 也就是说：上面这几个图片模型负责**场景、产品、服装、道具和风格板**；人走 `asset://`。
+
+接线之前还有一条值得先知道：**首帧与参考素材互斥。** `first_frame_url` / `last_frame_url`
+不能和 `reference_image_urls` / `reference_video_urls` / `reference_audio_urls` 同时传，
+两种输入方式只能选一种。同时传会被直接拒，而不是默默忽略掉其中一边（2026 年 8 月 8 日实测）。
+
+```bash
+# 1) 先做参考图。异步：返回 taskId，用同一个端点轮询拿结果 URL。
+curl -X POST https://apimodels.app/api/v1/images/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"gpt-image-2","resolution":"2K","aspect_ratio":"16:9",
+       "prompt":"无缝深灰背景上的产品静物：一只哑光黑咖啡罐，拉丝钢盖，单一硬光从镜头左侧打来，标签上没有文字"}'
+
+# 2) 把出好的图直接喂给视频任务——同一把 key、同一个域名。
+#    在提示词里按顺序引用为 图片1 / @image1。
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","duration":8,"resolution":"720p",
+       "reference_image_urls":["<第 1 步拿到的结果 URL>"],
+       "prompt":"图片1 里的咖啡罐居中摆放，硬光扫过罐盖。镜头缓慢推近；标签保持与 图片1 完全一致。"}'
+```
 
 ### 30 秒上手
 
@@ -245,4 +291,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 ## 授权
 
 我们写的部分——反推提示词、这份指南、各索引——采用 [MIT](./LICENSE)。作者原文版权归作者所有，
-本仓库只带署名索引，不重新授权。预览图是作者原帖视频里的单帧静图，仅用于识别，并链回出处。
+本仓库只带署名索引，不重新授权。
+
+预览取自作者原帖，仅用于识别，每一条都链回出处：索引页是单帧静图，单条提示词页是一段
+2.5 秒、400 像素宽、10 帧/秒的无声节选。成片本身的版权属于作者，本仓库不对其重新授权。
+**如果你是其中某条的作者、不希望我们托管你成片的节选，开个 issue 即可，我们会立刻退回静图
+或直接删掉——不争辩、不拖延。**

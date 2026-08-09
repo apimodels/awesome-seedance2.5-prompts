@@ -6,7 +6,7 @@
 - **Source:** [@LudovicCreator](https://x.com/LudovicCreator/status/2083976170932989982) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-c97a008aa714f8203046fcc07
 
-![Silhouette transformation in a lightning void](../../assets/previews/lightning-sorceress-transformation.jpg)
+![Silhouette transformation in a lightning void](../../assets/previews/lightning-sorceress-transformation.gif)
 
 ## Why this one is worth reading
 
@@ -42,6 +42,16 @@ The camera holds frontal and pushes in step by step across the three stages, fro
 Sound includes low sub-bass pressure that rises across the whole clip, sharp thunder cracks synchronised to each visual strike, an electrical crackle that tightens as the hair ignites, a single ringing tone when the sigil lights, and no dialogue.
 ```
 
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+
+```bash
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","prompt":"<the prompt above>","duration":30,"resolution":"480p"}'
+```
+
+The author's "adapted to 30 sec" is this `duration` field, and it is also what moves the bill: 30 s is $4.02 at 480p and $9.00 at 720p (4–30 s in one pass, or `-1` to let the model choose). The API exposes 480p and 720p only. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+
 ## 提示词(中文)
 
 ```text
@@ -75,3 +85,7 @@ Sound includes low sub-bass pressure that rises across the whole clip, sharp thu
 ---
 
 > 这条的中文说明:作者说这是把已有的变身提示词「改写成 30 秒版本」——整个库里最有用的一句话。从 10 秒到 30 秒不是加水，而是把一个事件拆成若干阶段状态，每段都给出下一段要继承的结束条件。
+
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+
+作者说的「改写成 30 秒」，在 API 上就是 `duration`，它同时也是账单的开关——30 秒 480p 约 $4.02，720p 约 $9.00（单次 4–30 秒，或填 `-1` 让模型自己定）。API 只开放 480p 和 720p。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)

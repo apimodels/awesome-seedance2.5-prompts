@@ -3,6 +3,7 @@
 [![Gallery](https://img.shields.io/badge/Browse%2095%2B%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
 [![One API](https://img.shields.io/badge/One%20API-85%2B%20models-3158E8)](https://apimodels.app/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.134%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
+[![Reference images](https://img.shields.io/badge/Reference%20images-from%20%240.008-8b5cf6)](#the-reference-images-have-to-come-from-somewhere)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 A curated library of **Seedance 2.5 video prompts** — every one shown next to the clip it
@@ -33,9 +34,10 @@ ByteDance also shipped an **official prompting manual** for it, written by the p
 trained the model. We walked through it in English here:
 **[The Seedance 2.5 Prompting Guide](https://apimodels.app/blog/seedance-2-5-prompting-guide)**.
 
-> **Sourcing.** The numbers above are ByteDance's published figures, not our measurements —
-> we do not have API access to 2.5 yet (see [Where to run these](#where-to-run-these-prompts)),
-> so we are not going to present announced specs as tested ones.
+> **Sourcing.** The table above is ByteDance's published figures. Anything we have since put
+> through the live API ourselves is marked as measured — the 480p/720p ceiling and the billing
+> notes under [Where to run these](#where-to-run-these-prompts) are ours, tested on
+> 8 August 2026. Announced specs and tested ones are kept apart on purpose.
 
 ---
 
@@ -224,8 +226,8 @@ Docs: **[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)**
 
 Today, the creators in this library run 2.5 in **Dreamina (Jimeng)** and **Higgsfield**.
 
-What you *can* call through us right now, with the same key and the same endpoint — so
-migrating to 2.5 when it opens is a one-string change:
+The other video models on the same key and the same endpoint — moving between any of them is
+a one-string change:
 
 | Model | From | What it is |
 |---|---|---|
@@ -240,6 +242,55 @@ migrating to 2.5 when it opens is a one-string change:
 Pay as you go, no subscription, **$1 free on sign-up**, and only successful requests are
 charged. Full list: **[apimodels.app/models](https://apimodels.app/models)** ·
 API docs: **[apimodels.app/docs/video](https://apimodels.app/docs/video)**
+
+### The reference images have to come from somewhere
+
+Seedance 2.5 accepts **up to 30 reference images** in one job, and most of the prompts in this
+library lean on that: a wardrobe that must not drift, a product that has to stay the same
+product, a set the camera is not allowed to contradict. Those boards are just images, and the
+same key and the same host generate them. Prices are per image at native 1K / 2K / 4K — no
+upscaler anywhere in the path, and only a render that succeeds is charged.
+
+| Model | API string | 1K | 2K | 4K |
+|---|---|---|---|---|
+| **[GPT Image 2](https://apimodels.app/models/gpt-image-2)** | `gpt-image-2` | **$0.025** | $0.03 | $0.05 |
+| [GPT Image 2 Lite](https://apimodels.app/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.008** | $0.015 | $0.025 |
+| **[Nano Banana Pro](https://apimodels.app/models/nanobananapro)** (Gemini 3 Pro Image) | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
+| [Nano Banana 2](https://apimodels.app/models/nanobanana2) (Gemini 3.1 Flash Image) | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
+
+> **Faces are the exception, and it is cheaper to know this before you spend a render.**
+> Volcengine moderates every raw `http(s)` image handed to Seedance *at create time* and
+> rejects one that appears to contain a real person. We hit it again on 2.5 on 8 August 2026 —
+> using ByteDance's own documentation sample as a first frame — and the job was refused before
+> it was ever queued, so it cost nothing but it also produced nothing. Invented, non-real
+> subjects pass normally. For a **specific** real person, register the portrait in the asset
+> library and pass its `asset://` id instead of a URL.
+>
+> So: the image models above are for **sets, products, wardrobe, props and style boards**.
+> People go through `asset://`.
+
+One more thing worth knowing before you wire this up: **first frame and reference media are
+mutually exclusive.** `first_frame_url` / `last_frame_url` cannot be sent alongside
+`reference_image_urls` / `reference_video_urls` / `reference_audio_urls` — pick one input mode.
+Sending both is rejected rather than silently ignored (measured 8 August 2026).
+
+```bash
+# 1) Build the reference board. Async: returns a taskId, poll the same endpoint for the URL.
+curl -X POST https://apimodels.app/api/v1/images/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"gpt-image-2","resolution":"2K","aspect_ratio":"16:9",
+       "prompt":"product still on seamless charcoal paper: a matte black espresso tin, brushed steel lid, single hard key light from camera left, no text on the label"}'
+
+# 2) Hand the finished image straight to the video job — same key, same host.
+#    Cite it in the prompt in order as 图片1 / @image1.
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","duration":8,"resolution":"720p",
+       "reference_image_urls":["<result url from step 1>"],
+       "prompt":"The tin from 图片1 sits centred as the key light rakes across the lid. The camera pushes in slowly; the label stays exactly as it is in 图片1."}'
+```
 
 ### 30-second start
 
@@ -271,5 +322,11 @@ clip is actually Seedance 2.5 rather than another model.
 
 Everything we wrote — the reconstructed prompts, the guide, the indexes — is
 [MIT](./LICENSE). Author-written prompts belong to their authors and are indexed here with
-credit, not relicensed. Preview stills are single frames from the creators' own posts,
-included for identification and linked back to the source.
+credit, not relicensed.
+
+Previews are taken from the creators' own posts and are included for identification, each one
+linked back to its source: a single still on the index pages, and on a prompt's own page a
+silent 2.5-second excerpt at 400 px and 10 fps. The clips themselves belong to the people who
+made them and are not relicensed here. **If you are one of those creators and would rather we
+did not host an excerpt of your clip, open an issue and we will drop it to a still or remove
+it — no argument, no delay.**

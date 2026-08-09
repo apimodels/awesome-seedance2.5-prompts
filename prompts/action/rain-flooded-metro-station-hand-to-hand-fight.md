@@ -6,7 +6,7 @@
 - **Source:** [@lansenai](https://x.com/lansenai/status/2083521805176988016) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-ccc25e6fc74a17881b0973efa
 
-![Thirty seconds of hand-to-hand combat in a rain-flooded metro maintenance hall](../../assets/previews/rain-flooded-metro-station-hand-to-hand-fight.jpg)
+![Thirty seconds of hand-to-hand combat in a rain-flooded metro maintenance hall](../../assets/previews/rain-flooded-metro-station-hand-to-hand-fight.gif)
 
 ## Why this one is worth reading
 
@@ -20,6 +20,22 @@ The longest prompt in this library at roughly 4,300 characters, and the clearest
 
 The full 4,576-character prompt is on the [gallery page](https://apimodels.app/seedance-2-5-prompts#prompt-ccc25e6fc74a17881b0973efa) with credit to its author, and in [the original post](https://x.com/lansenai/status/2083521805176988016).
 
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+
+```bash
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","prompt":"<the full prompt from the gallery page>","duration":30,"resolution":"480p"}'
+```
+
+The five timed beats only fit at the full 30 s — $4.02 at 480p, $9.00 at 720p, and `duration` (4–30 s in one pass, or `-1` to let the model choose) is what moves the bill. The API exposes 480p and 720p only.
+
+This prompt locks two identities from reference images of people: a raw photo that appears to contain a real person is rejected at create time, so real faces go through the `asset://` portrait library. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+
 ---
 
 > 这条的中文说明:本库最长的一条，约 4300 字，也最能说明「30 秒」在写作上要付出什么。两个用参考图锁死的身份、一张镜头不得自相矛盾的平面图、从 0—4 秒到 26—30 秒五个计时段落、「每次进攻必须有起点—路径—接触点—结果」的硬规则，以及结尾一整块负向约束。它甚至禁止主角全程无伤取胜——那是叙事指令，不是技术指令。
+
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上（prompt 换成画廊页的全文）：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+
+五个计时段落只有跑满 30 秒才装得下：480p 约 $4.02，720p 约 $9.00，`duration` 才是账单的开关（单次 4–30 秒，或填 `-1` 让模型自己定）；API 只开放 480p 和 720p。这条要用两组真人参考图——看起来含真人的原图会在创建时被上游审核拒掉，真人一律走 `asset://` 人像库。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)

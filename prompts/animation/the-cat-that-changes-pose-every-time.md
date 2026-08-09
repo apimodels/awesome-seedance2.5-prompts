@@ -6,7 +6,7 @@
 - **Source:** [@pan_soramame_da](https://x.com/pan_soramame_da/status/2085493871639994803) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-c1e06ba0fe1177288153c5816
 
-![The cat that has changed pose every time she walks past](../../assets/previews/the-cat-that-changes-pose-every-time.jpg)
+![The cat that has changed pose every time she walks past](../../assets/previews/the-cat-that-changes-pose-every-time.gif)
 
 ## Why this one is worth reading
 
@@ -30,6 +30,16 @@ Keep the corridor layout, cushion position, fan and garden identical in all four
 Sound includes cicadas, the fan's slow oscillation, bare feet on old wood, the paper screens rattling faintly, one small sleepy chirrup from <CAT>, and a sparse piano figure with long gaps. No dialogue.
 ```
 
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+
+```bash
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","prompt":"<the prompt above>","duration":20,"resolution":"480p"}'
+```
+
+This one is 20 s — $2.68 at 480p, $6.00 at 720p. Four passes need room to breathe, so `duration` is the parameter to raise before anything else (4–30 s in one pass, or `-1` to let the model choose). The API exposes 480p and 720p only. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+
 ## 提示词(中文)
 
 ```text
@@ -51,3 +61,7 @@ Sound includes cicadas, the fan's slow oscillation, bare feet on old wood, the p
 ---
 
 > 这条的中文说明:「同一个镜头只变一样东西」是很好的压力测试：模型必须把整个场景钉死，同时刻意改变主体。用文字把布局锁住，这个梗才成立。
+
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+
+这条是 20 秒：480p 约 $2.68，720p 约 $6.00。四次经过要留出节奏，先动的参数就是 `duration`（单次 4–30 秒，或填 `-1` 让模型自己定），它也是账单的开关。API 只开放 480p 和 720p。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)

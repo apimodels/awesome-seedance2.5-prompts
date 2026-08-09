@@ -6,7 +6,7 @@
 - **Source:** [@onofumi_AI](https://x.com/onofumi_AI/status/2083560874443432048) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-cb233d1612918f6dd6c62fa87
 
-![Thirty-second selfie day-in-the-life](../../assets/previews/thirty-second-selfie-day-in-the-life.jpg)
+![Thirty-second selfie day-in-the-life](../../assets/previews/thirty-second-selfie-day-in-the-life.gif)
 
 ## Why this one is worth reading
 
@@ -42,6 +42,16 @@ The camera is handheld at arm's length for every outdoor beat, propped and stati
 Sound includes room tone, running water, the door lock, street ambience with birds and one distant car, café clatter and low conversation, the fork on the plate, and <WOMAN> speaking short casual lines to camera with accurate lip sync. No music.
 ```
 
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+
+```bash
+curl -X POST https://apimodels.app/api/v1/video/generations \
+  -H "Authorization: Bearer $APIMODELS_API_KEY" -H "Content-Type: application/json" \
+  -d '{"model":"seedance-2.5","prompt":"<the prompt above>","duration":30,"resolution":"480p"}'
+```
+
+Put a number on the re-roll argument above: at 30 s each attempt is $4.02 at 480p, $9.00 at 720p — `duration` (4–30 s in one pass, or `-1` to let the model choose) is the only real cost lever. The API exposes 480p and 720p only. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+
 ## 提示词(中文)
 
 ```text
@@ -75,3 +85,7 @@ Sound includes room tone, running water, the door lock, street ambience with bir
 ---
 
 > 这条的中文说明:作者给了个数字：30 秒大约 1500 日元。读这么长的提示词时值得记住——每次重跑和第一次一样贵，这正是「按阶段写清结束状态」而不是反复试的真实理由。
+
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+
+给上面那句「重跑一样贵」补个数：30 秒每跑一次，480p 约 $4.02，720p 约 $9.00——`duration` 是唯一真正决定成本的参数（单次 4–30 秒，或填 `-1` 让模型自己定）。API 只开放 480p 和 720p。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)
