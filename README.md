@@ -307,9 +307,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 
 ## Related libraries
 
-- **[Stunning MiniMax H3 Prompts](https://github.com/stimQQ/stunning-minimax-h3-prompts)** —
+- **[Stunning MiniMax H3 Prompts](https://github.com/apimodels/stunning-minimax-h3-prompts)** —
   222 MiniMax H3 (Hailuo 3) video prompts, same format.
-- **[GPT Image 2 Prompts](https://github.com/stimQQ/gpt-image-2-prompts)** — 955 image
+- **[GPT Image 2 Prompts](https://github.com/apimodels/gpt-image-2-prompts)** — 955 image
   prompts with the image each one rendered.
 
 ## Contributing

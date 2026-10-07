@@ -278,9 +278,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 
 ## 相关仓库
 
-- **[Stunning MiniMax H3 Prompts](https://github.com/stimQQ/stunning-minimax-h3-prompts)**
+- **[Stunning MiniMax H3 Prompts](https://github.com/apimodels/stunning-minimax-h3-prompts)**
   —— 222 条 MiniMax H3（海螺 3）视频提示词，同样的格式。
-- **[GPT Image 2 Prompts](https://github.com/stimQQ/gpt-image-2-prompts)** —— 955 条图片
+- **[GPT Image 2 Prompts](https://github.com/apimodels/gpt-image-2-prompts)** —— 955 条图片
   提示词，每条都附它渲染出的图。
 
 ## 参与补充
