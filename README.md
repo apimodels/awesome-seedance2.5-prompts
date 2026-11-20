@@ -1,15 +1,17 @@
 # Awesome Seedance 2.5 Prompts
 
-[![Gallery](https://img.shields.io/badge/Browse%2095%2B%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
+[![Gallery](https://img.shields.io/badge/Browse%20789%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
 [![One API](https://img.shields.io/badge/One%20API-85%2B%20models-3158E8)](https://apimodels.app/models)
-[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.134%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
+[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.120%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
 [![Reference images](https://img.shields.io/badge/Reference%20images-from%20%240.008-8b5cf6)](#the-reference-images-have-to-come-from-somewhere)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-A curated library of **Seedance 2.5 video prompts** — every one shown next to the clip it
-actually produced, with credit and a link to the creator's original post.
+Awesome Seedance 2.5 Prompts is a library of **789 Seedance 2.5 video prompts**: 783 published by 199 creators on X and Civitai and quoted in full with credit and a link to the original post, plus 6 reconstructions written by us from finished clips. Nine of them are showcased below next to the clip each produced, followed by a prompting guide.
 
-**[中文说明](./README.zh-CN.md)** · **[Browse all 9 prompts](./prompts/GALLERY.md)** ·
+Disclosure: this collection is curated by [apimodels.app](https://apimodels.app), the API platform I work on. apimodels.app offers [Seedance 2.5 through an API](https://apimodels.app/models/seedance-2.5); prices and limits are under [Where to run these prompts](#where-to-run-these-prompts). A browsable version with the clips playing inline is the [Seedance 2.5 prompt library on apimodels.app](https://apimodels.app/seedance-2-5-prompts).
+
+**[中文说明](./README.zh-CN.md)** · **[Browse the 9 showcased prompts](./prompts/GALLERY.md)** ·
+**[Full library: 789 prompts](./prompts/LIBRARY.md)** ·
 **[Watch them with sound](https://apimodels.app/seedance-2-5-prompts)** ·
 **[Jump to the prompting guide](#seedance-25-prompts-guide)**
 
@@ -23,7 +25,7 @@ By ByteDance's announced figures:
 | | Seedance 2.5 | Seedance 2.0 (for comparison) |
 |---|---|---|
 | Length in one pass | **30 s** | 4–15 s |
-| Resolution | **480p / 720p** on the API (the announced native 4K 10-bit is not exposed) | up to 1080p on the official channel |
+| Resolution | **480p / 720p** on the API (the announced native 4K 10-bit is not exposed) | up to 1080p |
 | Reference assets per job | **up to 50** | up to 9 images + video + audio |
 | — images | up to 30, each ≤ 4K | 9 |
 | — video / audio | up to 10 clips each, 30 s total each | 1 video + 1 audio |
@@ -34,17 +36,17 @@ ByteDance also shipped an **official prompting manual** for it, written by the p
 trained the model. We walked through it in English here:
 **[The Seedance 2.5 Prompting Guide](https://apimodels.app/blog/seedance-2-5-prompting-guide)**.
 
-> **Sourcing.** The table above is ByteDance's published figures. Anything we have since put
-> through the live API ourselves is marked as measured — the 480p/720p ceiling and the billing
-> notes under [Where to run these](#where-to-run-these-prompts) are ours, tested on
-> 8 August 2026. Announced specs and tested ones are kept apart on purpose.
+**Sourcing.** The table above is ByteDance's published figures. Anything we have since put
+through the live API ourselves is marked as measured — the 480p/720p ceiling and the billing
+notes under [Where to run these](#where-to-run-these-prompts) are ours, tested on
+8 August 2026. Announced specs and tested ones are kept apart on purpose.
 
 ---
 
 ## Seedance 2.5 prompts guide
 
 Everything below comes from three places, kept separate on purpose: ByteDance's official
-manual, the nine prompts in this library, and field notes from a creator who spent roughly
+manual, the nine showcased prompts, and field notes from a creator who spent roughly
 50,000 credits (about ¥50,000) testing 2.5 on Dreamina.
 
 ### The order that works
@@ -59,9 +61,11 @@ Only the first two are required; drop anything you do not need. "A person walkin
 a stock loop. The same subject with a camera move and a light direction attached gets you a
 shot:
 
-> A person slowly walks through a city at dusk. The camera follows from behind, then swings
-> around to a side profile midway. Soft backlighting, cinematic colour tones, natural
-> movement of clothing and hair.
+```text
+A person slowly walks through a city at dusk. The camera follows from behind, then swings
+around to a side profile midway. Soft backlighting, cinematic colour tones, natural
+movement of clothing and hair.
+```
 
 The official base template:
 
@@ -133,7 +137,7 @@ image subjects, 1–5 video subjects at 5–10 s each — and it states the trad
 
 1. **Name your subjects and reuse the name.** Write `<SOLDIER>`, `<SHARI>`, `<WOMAN>` once
    and refer to that token every time after. Over 30 seconds, "she" and "the man" drift onto
-   the wrong body. A named token is the cheapest identity lock there is.
+   the wrong body. A named token is the most affordable identity lock there is.
 2. **Write the sound as a cue sheet, not a mood.** Audio comes out of the same pass as the
    picture. List the ambience, the specific foley, dialogue with the language named, and
    what should be absent. [One prompt here](./prompts/dialogue/seven-shot-bedroom-candid-cat-call-doorbell.md)
@@ -165,7 +169,7 @@ they are consistent with what the official guide describes, but we have not meas
 
 | | Count | What it is |
 |---|---|---|
-| **Author-written** | 3 | Published by the creator. Credited and linked to the original post. Full text lives in our [gallery](https://apimodels.app/seedance-2-5-prompts) — we index it here rather than copy it, because we do not own it. |
+| **Author-written** | 3 showcased, 783 in the [full library](./prompts/LIBRARY.md) | Published by the creator. Credited and linked to the original post, and quoted in full, word for word, in the [full library](./prompts/LIBRARY.md) and our [gallery](https://apimodels.app/seedance-2-5-prompts). The text stays the creator's. |
 | **Reconstructed** | 6 | For clips whose creator never published a prompt, we sample frames from the finished video and write the prompt that would most plausibly reproduce it. **MIT, full text in this repo.** |
 
 A reconstruction describes the *output*. It cannot recover negative constraints, exact
@@ -176,8 +180,8 @@ and every one is labelled `reconstructed`.
 translate them, because a translated prompt does not generate the same clip. Our own
 reconstructions are written natively in both English and Chinese.
 
-**Where the clips ran.** The creators here used ByteDance's own Dreamina (Jimeng) and
-Higgsfield. Where a post named the platform, the entry says so.
+**Where the clips ran.** The creators of the nine showcased prompts used ByteDance's own
+Dreamina (Jimeng) and Higgsfield. Where a post named the platform, the entry says so.
 
 Creators: if you would like an entry removed or a credit corrected, open an issue.
 
@@ -185,7 +189,7 @@ Creators: if you would like an entry removed or a credit corrected, open an issu
 
 ## The prompts
 
-**[Browse all 9 with preview stills →](./prompts/GALLERY.md)**
+**[Browse the 9 with preview stills →](./prompts/GALLERY.md)**
 
 | # | Prompt | Category | Length | Source |
 |---|---|---|---|---|
@@ -199,17 +203,36 @@ Creators: if you would like an entry removed or a credit corrected, open an issu
 | 8 | [The cat that has changed pose every time she walks past](./prompts/animation/the-cat-that-changes-pose-every-time.md) | Animation & Anime | 20 s | [@pan_soramame_da](https://x.com/pan_soramame_da/status/2085493871639994803) · reconstructed |
 | 9 | [Thirty-second selfie day-in-the-life](./prompts/long-form/thirty-second-selfie-day-in-the-life.md) | 30 s & Multi-Shot | 30 s | [@onofumi_AI](https://x.com/onofumi_AI/status/2083560874443432048) · reconstructed |
 
-The longest prompt in the library is **4,576 characters** — a 30-second fight scene with two
+The longest of the nine is **4,576 characters** — a 30-second fight scene with two
 identities locked from reference images, a fixed floor plan the camera may not contradict,
 five timed beats, and a closing block of negative constraints. It is the clearest single
 demonstration of what 30 seconds costs you in writing.
 
 ---
 
+## Full library (789 prompts)
+
+The nine prompts above are the showcase. The full library has **789 Seedance 2.5 prompts**, the same set as the [gallery on apimodels.app](https://apimodels.app/seedance-2-5-prompts): 783 published by 199 creators on X (745) and Civitai (38), each quoted in full, word for word, with credit and a link to the original post, plus the 6 reconstructions above. Every prompt has its own page with the creator, the original post, where it was found, the language, the length and a link to the clip.
+
+**[Open the full library →](./prompts/LIBRARY.md)** · all 789 as JSON: [data/prompts.json](./data/prompts.json)
+
+| Category | Prompts |
+|---|---|
+| [30s & Multi-Shot](./prompts/LIBRARY.md#30s--multi-shot) | 20 |
+| [Candid & Handheld](./prompts/LIBRARY.md#candid--handheld) | 120 |
+| [Dialogue & Lip Sync](./prompts/LIBRARY.md#dialogue--lip-sync) | 23 |
+| [Action & Fight](./prompts/LIBRARY.md#action--fight) | 171 |
+| [Cinematic & VFX](./prompts/LIBRARY.md#cinematic--vfx) | 269 |
+| [Animation & Anime](./prompts/LIBRARY.md#animation--anime) | 105 |
+| [Product & Ads](./prompts/LIBRARY.md#product--ads) | 44 |
+| [Reference & Consistency](./prompts/LIBRARY.md#reference--consistency) | 37 |
+
+---
+
 ## Where to run these prompts
 
-**Seedance 2.5 is live on apimodels.app** as the model `seedance-2.5`, from **$0.134/s**
-at 480p and $0.300/s at 720p — one API key, no Volcengine account and no enterprise
+**Seedance 2.5 is live on apimodels.app** as the model `seedance-2.5`, from **$0.120/s**
+at 480p and $0.270/s at 720p — one API key, no Volcengine account and no enterprise
 verification. It generates 4-30 seconds in a single pass, takes up to 50 reference assets
 (30 images + 10 videos + 10 audios), and adds video editing and video extension.
 
@@ -218,13 +241,13 @@ Two things the launch coverage gets wrong, so they are worth stating plainly:
 - **The API is 480p and 720p only.** The "native 4K, 10-bit" figure above is what ByteDance
   announced at FORCE; it is not a resolution the API exposes. If you need 1080p or 4K today,
   use [Seedance 2.0](https://apimodels.app/models/seedance-2.0).
-- **Reference-video jobs are not cheaper.** Editing or extending a clip bills on
+- **Reference-video jobs do not cost less.** Editing or extending a clip bills on
   (source seconds + output seconds), so turning a clip into an output of the same length
   costs about 20-25% more than generating that length outright.
 
 Docs: **[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)**
 
-Today, the creators in this library run 2.5 in **Dreamina (Jimeng)** and **Higgsfield**.
+The creators of the nine showcased prompts ran 2.5 in **Dreamina (Jimeng)** and **Higgsfield**.
 
 The other video models on the same key and the same endpoint — moving between any of them is
 a one-string change:
@@ -233,7 +256,7 @@ a one-string change:
 |---|---|---|
 | **[Seedance 2.0](https://apimodels.app/models/seedance-2.0)** | **$0.092** / s | ByteDance official Ark: 9 reference images + reference video + audio, native synced audio |
 | [Seedance 2.0 Fast](https://apimodels.app/models/seedance-2.0-fast) | **$0.071** / s | Same capability, speed/cost tier |
-| [Seedance 2.0 Mini](https://apimodels.app/models/seedance-2.0-mini) | **$0.044** / s | Cheapest Seedance tier |
+| [Seedance 2.0 Mini](https://apimodels.app/models/seedance-2.0-mini) | **$0.044** / s | Most affordable Seedance tier |
 | [Dreamina Seedance 2.0](https://apimodels.app/models/dreamina-seedance-2-0) | per second | International line, native up to 4K 10-bit |
 | **[MiniMax H3](https://apimodels.app/models/minimax-h3)** | **$0.145** / s | Native 2K + synced audio, 9 ref images + 3 videos + 3 audio |
 | **[Kling V3](https://apimodels.app/models/kling-v3)** | **$0.12** / s | 3–15 s, text- and image-to-video, optional audio |
@@ -258,16 +281,16 @@ upscaler anywhere in the path, and only a render that succeeds is charged.
 | **[Nano Banana Pro](https://apimodels.app/models/nanobananapro)** (Gemini 3 Pro Image) | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
 | [Nano Banana 2](https://apimodels.app/models/nanobanana2) (Gemini 3.1 Flash Image) | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
 
-> **Faces are the exception, and it is cheaper to know this before you spend a render.**
-> Volcengine moderates every raw `http(s)` image handed to Seedance *at create time* and
-> rejects one that appears to contain a real person. We hit it again on 2.5 on 8 August 2026 —
-> using ByteDance's own documentation sample as a first frame — and the job was refused before
-> it was ever queued, so it cost nothing but it also produced nothing. Invented, non-real
-> subjects pass normally. For a **specific** real person, register the portrait in the asset
-> library and pass its `asset://` id instead of a URL.
->
-> So: the image models above are for **sets, products, wardrobe, props and style boards**.
-> People go through `asset://`.
+**Faces are the exception, and it is worth knowing this before you spend a render.**
+Volcengine moderates every raw `http(s)` image handed to Seedance *at create time* and
+rejects one that appears to contain a real person. We hit it again on 2.5 on 8 August 2026 —
+using ByteDance's own documentation sample as a first frame — and the job was refused before
+it was ever queued, so it cost nothing but it also produced nothing. Invented, non-real
+subjects pass normally. For a **specific** real person, register the portrait in the asset
+library and pass its `asset://` id instead of a URL.
+
+So: the image models above are for **sets, products, wardrobe, props and style boards**.
+People go through `asset://`.
 
 One more thing worth knowing before you wire this up: **first frame and reference media are
 mutually exclusive.** `first_frame_url` / `last_frame_url` cannot be sent alongside
@@ -307,9 +330,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 
 ## Related libraries
 
-- **[Stunning MiniMax H3 Prompts](https://github.com/apimodels/stunning-minimax-h3-prompts)** —
+- **[Stunning MiniMax H3 Prompts](https://github.com/stimQQ/stunning-minimax-h3-prompts)** —
   222 MiniMax H3 (Hailuo 3) video prompts, same format.
-- **[GPT Image 2 Prompts](https://github.com/apimodels/gpt-image-2-prompts)** — 955 image
+- **[GPT Image 2 Prompts](https://github.com/stimQQ/gpt-image-2-prompts)** — 955 image
   prompts with the image each one rendered.
 
 ## Contributing
@@ -320,9 +343,11 @@ clip is actually Seedance 2.5 rather than another model.
 
 ## License
 
-Everything we wrote — the reconstructed prompts, the guide, the indexes — is
-[MIT](./LICENSE). Author-written prompts belong to their authors and are indexed here with
-credit, not relicensed.
+Everything we wrote for the showcase — the reconstructed prompts, the guide, the indexes — is
+[MIT](./LICENSE). The full library added under `prompts/library/`, `prompts/LIBRARY*.md` and
+`data/prompts.json`: our titles, category tables and data are [CC BY 4.0](./LICENSE-CC-BY-4.0).
+Author-written prompts belong to their authors; they are quoted in full with credit and a link
+to the original post, and are not relicensed.
 
 Previews are taken from the creators' own posts and are included for identification, each one
 linked back to its source: a single still on the index pages, and on a prompt's own page a

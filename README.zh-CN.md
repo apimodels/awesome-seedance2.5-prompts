@@ -1,14 +1,17 @@
 # Awesome Seedance 2.5 Prompts · Seedance 2.5 提示词库
 
-[![画廊](https://img.shields.io/badge/95%2B%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
+[![画廊](https://img.shields.io/badge/789%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
 [![一个 API](https://img.shields.io/badge/一个%20API-85%2B%20模型-3158E8)](https://apimodels.app/zh/models)
-[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.134%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
+[![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.120%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
 [![参考图](https://img.shields.io/badge/参考图-%240.008%2F张起-8b5cf6)](#参考图总得先有)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-精选 **Seedance 2.5 视频提示词**——每条都配上它真实生成的那段成片，署名作者并链回原帖。
+本仓库收录 **789 条 Seedance 2.5 视频提示词**：783 条是 199 位作者在 X 和 Civitai 上公开的原文，逐字全文收录、署名并附原帖链接，另有 6 条是我们根据成片反推的；其中 9 条在下面精选展示，配着各自的成片，另附一份写法指南。
 
-**[English](./README.md)** · **[看全部 9 条](./prompts/GALLERY.zh-CN.md)** ·
+说明：这个合集由 [apimodels.app](https://apimodels.app) 整理，我在这个 API 平台工作。apimodels.app 也提供 [Seedance 2.5 的 API](https://apimodels.app/zh/models/seedance-2.5)，价格和限制见「[在哪能跑这些提示词](#在哪能跑这些提示词)」。带成片、可以直接播放的在线版在 [apimodels.app 的 Seedance 2.5 提示词库](https://apimodels.app/zh/seedance-2-5-prompts)。
+
+**[English](./README.md)** · **[看精选的 9 条](./prompts/GALLERY.zh-CN.md)** ·
+**[全部提示词库：789 条](./prompts/LIBRARY.zh-CN.md)** ·
 **[在画廊里带声音看](https://apimodels.app/zh/seedance-2-5-prompts)** ·
 **[直接跳到写法指南](#seedance-25-提示词写法指南)**
 
@@ -21,7 +24,7 @@
 | | Seedance 2.5 | Seedance 2.0（对照） |
 |---|---|---|
 | 单次生成时长 | **30 秒** | 4–15 秒 |
-| 分辨率 | API 上是 **480p / 720p**（公布的原生 4K 10-bit 并未开放） | 官方渠道上限 1080p |
+| 分辨率 | API 上是 **480p / 720p**（公布的原生 4K 10-bit 并未开放） | 最高 1080p |
 | 单次参考素材 | **最多 50 份** | 最多 9 张图 + 参考视频 + 参考音频 |
 | — 图片 | 最多 30 张，单张 ≤ 4K | 9 张 |
 | — 视频 / 音频 | 各最多 10 段，各自总时长 ≤ 30 秒 | 各 1 段 |
@@ -31,9 +34,9 @@
 字节还为它发布了一份**官方提示词指南**，由训练这个模型的人写的。我们整理过完整的英文版：
 **[Seedance 2.5 官方提示词指南](https://apimodels.app/zh/blog/seedance-2-5-prompting-guide)**。
 
-> **关于出处。** 上表是字节公布的数字。我们自己在正式接口上跑过的部分会明确标成实测——
-> 下面[在哪能跑](#在哪能跑这些提示词)里「只有 480p / 720p」和那两条计费口径，是我们
-> 2026 年 8 月 8 日实测的结论。公布的规格和测过的规格，这里一直分开讲。
+**关于出处。** 上表是字节公布的数字。我们自己在正式接口上跑过的部分会明确标成实测——
+下面[在哪能跑](#在哪能跑这些提示词)里「只有 480p / 720p」和那两条计费口径，是我们
+2026 年 8 月 8 日实测的结论。公布的规格和测过的规格，这里一直分开讲。
 
 ---
 
@@ -53,8 +56,10 @@
 只有前两项是必须的，其余按需取用。「一个人在走路」只会给你一段素材库循环；同一个主体，
 加上镜头怎么动、光从哪来，才是一个镜头：
 
-> 一个人在黄昏的城市里缓步而行。镜头先从背后跟随，中途摇转到侧脸。柔和的逆光，
-> 电影感的色调，衣物和头发自然摆动。
+```text
+一个人在黄昏的城市里缓步而行。镜头先从背后跟随，中途摇转到侧脸。柔和的逆光，
+电影感的色调，衣物和头发自然摆动。
+```
 
 官方的基础模板：
 
@@ -148,7 +153,7 @@
 
 | | 数量 | 是什么 |
 |---|---|---|
-| **作者原文** | 3 条 | 作者自己公开的。带署名、链回原帖。全文放在我们的[画廊页](https://apimodels.app/zh/seedance-2-5-prompts)，本仓库只做索引不复制——因为版权不归我们。 |
+| **作者原文** | 精选 3 条，[全部提示词库](./prompts/LIBRARY.zh-CN.md)里 783 条 | 作者自己公开的。带署名、链回原帖，在[全部提示词库](./prompts/LIBRARY.zh-CN.md)和我们的[画廊页](https://apimodels.app/zh/seedance-2-5-prompts)里逐字全文收录。版权仍归作者。 |
 | **反推** | 6 条 | 作者从未公开提示词的成片，我们从成片抽帧，写出最可能复现它的那条提示词。**MIT，全文在本仓库。** |
 
 反推描述的是**结果**。它拿不到负向约束、精确台词和参考图工作流——它是写法参考，
@@ -157,7 +162,7 @@
 **语言。** 提示词按作者原本书写的语言保存，我们**不翻译**——翻译过的提示词跑出来
 不是同一段片子。我们自己的反推稿则是中英各写一遍，不逐句互译。
 
-**成片在哪跑的。** 本库作者分别用了字节自家的即梦（Dreamina）和 Higgsfield。
+**成片在哪跑的。** 这 9 条精选的作者分别用了字节自家的即梦（Dreamina）和 Higgsfield。
 原帖里注明了平台的，条目上会写。
 
 作者们：如果希望撤下某条或更正署名，提个 issue 即可。
@@ -166,7 +171,7 @@
 
 ## 全部提示词
 
-**[带预览图浏览全部 9 条 →](./prompts/GALLERY.zh-CN.md)**
+**[带预览图浏览这 9 条 →](./prompts/GALLERY.zh-CN.md)**
 
 | # | 提示词 | 分类 | 时长 | 出处 |
 |---|---|---|---|---|
@@ -180,15 +185,34 @@
 | 8 | [每次路过都换个睡姿的猫](./prompts/animation/the-cat-that-changes-pose-every-time.md) | 动画与二次元 | 20 秒 | [@pan_soramame_da](https://x.com/pan_soramame_da/status/2085493871639994803) · 反推 |
 | 9 | [30 秒自拍式一日 vlog](./prompts/long-form/thirty-second-selfie-day-in-the-life.md) | 30 秒长片与分阶段 | 30 秒 | [@onofumi_AI](https://x.com/onofumi_AI/status/2083560874443432048) · 反推 |
 
-本库最长的一条是 **4576 字**：30 秒格斗戏，两个用参考图锁死的身份、一张镜头不得自相矛盾的
+这 9 条里最长的一条是 **4576 字**：30 秒格斗戏，两个用参考图锁死的身份、一张镜头不得自相矛盾的
 平面图、五个计时段落，外加结尾一整块负向约束。它最能说明「30 秒」在写作上要付出什么。
+
+---
+
+## 全部提示词库（789 条）
+
+上面 9 条是精选展示。完整的提示词库有 **789 条 Seedance 2.5 提示词**，和 [apimodels.app 上的画廊页](https://apimodels.app/zh/seedance-2-5-prompts)是同一批：783 条是 199 位作者在 X（745 条）和 Civitai（38 条）上公开的原文，逐字全文收录、署名并附原帖链接，另加上面那 6 条反推稿。每条都有单独一页，写明作者、原帖、从哪里发现的、语言、长度和成片链接。
+
+**[打开全部提示词库 →](./prompts/LIBRARY.zh-CN.md)** · 全部 789 条的 JSON：[data/prompts.json](./data/prompts.json)
+
+| 分类 | 条数 |
+|---|---|
+| [30 秒长片与分阶段](./prompts/LIBRARY.zh-CN.md#30-秒长片与分阶段) | 20 |
+| [纪实与手持真实感](./prompts/LIBRARY.zh-CN.md#纪实与手持真实感) | 120 |
+| [对白与口型](./prompts/LIBRARY.zh-CN.md#对白与口型) | 23 |
+| [动作与格斗](./prompts/LIBRARY.zh-CN.md#动作与格斗) | 171 |
+| [电影感与特效](./prompts/LIBRARY.zh-CN.md#电影感与特效) | 269 |
+| [动画与二次元](./prompts/LIBRARY.zh-CN.md#动画与二次元) | 105 |
+| [产品与广告](./prompts/LIBRARY.zh-CN.md#产品与广告) | 44 |
+| [参考素材与一致性](./prompts/LIBRARY.zh-CN.md#参考素材与一致性) | 37 |
 
 ---
 
 ## 在哪能跑这些提示词
 
-**Seedance 2.5 已在 apimodels.app 上线**，模型名 `seedance-2.5`，480p **$0.134/秒**起、
-720p $0.300/秒——一个 API Key 即可，无需火山账号、无需企业认证。单次出片 4–30 秒，
+**Seedance 2.5 已在 apimodels.app 上线**，模型名 `seedance-2.5`，480p **$0.120/秒**起、
+720p $0.270/秒——一个 API Key 即可，无需火山账号、无需企业认证。单次出片 4–30 秒，
 一个任务最多 50 份参考素材（30 图 + 10 视频 + 10 音频），并新增视频编辑与视频续写。
 
 有两点各家报道容易搞错，这里直说：
@@ -196,12 +220,12 @@
 - **API 上只有 480p 和 720p。** 上面表格里那个「原生 4K、10-bit」是字节在 FORCE 发布会
   公布的口径，API 并没有暴露这一档。今天要 1080p 或 4K，请用
   [Seedance 2.0](https://apimodels.app/zh/models/seedance-2.0)。
-- **带参考视频不等于更便宜。** 编辑或续写按「源片秒数 + 输出秒数」计费，所以把一段素材
+- **带参考视频并不会省钱。** 编辑或续写按「源片秒数 + 输出秒数」计费，所以把一段素材
   改成等长的成片，比直接生成同样长度贵约 20–25%。
 
 文档：**[/docs/seedance-2-5](https://apimodels.app/zh/docs/seedance-2-5)**
 
-今天，本库这些作者是在**即梦（Dreamina）**和 **Higgsfield** 上跑的 2.5。
+这 9 条精选的作者是在**即梦（Dreamina）**和 **Higgsfield** 上跑的 2.5。
 
 同一个端点、同一把 key 还能调的其它视频模型（换模型只改 model 这一个字符串）：
 
@@ -209,7 +233,7 @@
 |---|---|---|
 | **[Seedance 2.0](https://apimodels.app/zh/models/seedance-2.0)** | **$0.092** / 秒 | 火山方舟官方直连：9 张参考图 + 参考视频 + 参考音频，原生同步音频 |
 | [Seedance 2.0 Fast](https://apimodels.app/zh/models/seedance-2.0-fast) | **$0.071** / 秒 | 能力相同的速度/成本档 |
-| [Seedance 2.0 Mini](https://apimodels.app/zh/models/seedance-2.0-mini) | **$0.044** / 秒 | 最便宜的 Seedance 档位 |
+| [Seedance 2.0 Mini](https://apimodels.app/zh/models/seedance-2.0-mini) | **$0.044** / 秒 | Seedance 家族里起价最低的一档 |
 | [Dreamina Seedance 2.0](https://apimodels.app/zh/models/dreamina-seedance-2-0) | 按秒 | 国际线，原生最高 4K |
 | **[MiniMax H3](https://apimodels.app/zh/models/minimax-h3)** | **$0.145** / 秒 | 原生 2K + 同步音频，9 图 + 3 视频 + 3 音频 |
 | **[Kling V3](https://apimodels.app/zh/models/kling-v3)** | **$0.12** / 秒 | 3–15 秒，文生/图生视频，可选音频 |
@@ -233,13 +257,13 @@ Seedance 2.5 单个任务最多吃 **30 张参考图**，而本库大半的提�
 | **[Nano Banana Pro](https://apimodels.app/zh/models/nanobananapro)**（Gemini 3 Pro Image） | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
 | [Nano Banana 2](https://apimodels.app/zh/models/nanobanana2)（Gemini 3.1 Flash Image） | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
 
-> **人脸是例外，这条最好在花钱之前就知道。**
-> 火山对每一张直接传给 Seedance 的 `http(s)` 原图都会在**建任务的那一刻**过审，判定像真人
-> 就直接拒。2026 年 8 月 8 日我们在 2.5 上又撞了一次——用的还是字节自己文档里的示例图当
-> 首帧——任务在排队之前就被打回，所以不花钱，但也什么都没拿到。虚构的、非真实的人物正常
-> 通过。要指定**某个真人**，先把这张人像注册进素材库，然后传它的 `asset://` id，而不是 URL。
->
-> 也就是说：上面这几个图片模型负责**场景、产品、服装、道具和风格板**；人走 `asset://`。
+**人脸是例外，这条最好在花钱之前就知道。**
+火山对每一张直接传给 Seedance 的 `http(s)` 原图都会在**建任务的那一刻**过审，判定像真人
+就直接拒。2026 年 8 月 8 日我们在 2.5 上又撞了一次——用的还是字节自己文档里的示例图当
+首帧——任务在排队之前就被打回，所以不花钱，但也什么都没拿到。虚构的、非真实的人物正常
+通过。要指定**某个真人**，先把这张人像注册进素材库，然后传它的 `asset://` id，而不是 URL。
+
+也就是说：上面这几个图片模型负责**场景、产品、服装、道具和风格板**；人走 `asset://`。
 
 接线之前还有一条值得先知道：**首帧与参考素材互斥。** `first_frame_url` / `last_frame_url`
 不能和 `reference_image_urls` / `reference_video_urls` / `reference_audio_urls` 同时传，
@@ -278,9 +302,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 
 ## 相关仓库
 
-- **[Stunning MiniMax H3 Prompts](https://github.com/apimodels/stunning-minimax-h3-prompts)**
+- **[Stunning MiniMax H3 Prompts](https://github.com/stimQQ/stunning-minimax-h3-prompts)**
   —— 222 条 MiniMax H3（海螺 3）视频提示词，同样的格式。
-- **[GPT Image 2 Prompts](https://github.com/apimodels/gpt-image-2-prompts)** —— 955 条图片
+- **[GPT Image 2 Prompts](https://github.com/stimQQ/gpt-image-2-prompts)** —— 955 条图片
   提示词，每条都附它渲染出的图。
 
 ## 参与补充
@@ -290,8 +314,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
 
 ## 授权
 
-我们写的部分——反推提示词、这份指南、各索引——采用 [MIT](./LICENSE)。作者原文版权归作者所有，
-本仓库只带署名索引，不重新授权。
+我们为精选展示写的部分——反推提示词、这份指南、各索引——采用 [MIT](./LICENSE)。新增的全部提示词库
+（`prompts/library/`、`prompts/LIBRARY*.md` 和 `data/prompts.json`）里，我们起的标题、分类表和数据
+按 [CC BY 4.0](./LICENSE-CC-BY-4.0) 许可。作者原文版权归作者所有，逐字全文收录并署名、附原帖链接，不重新授权。
 
 预览取自作者原帖，仅用于识别，每一条都链回出处：索引页是单帧静图，单条提示词页是一段
 2.5 秒、400 像素宽、10 帧/秒的无声节选。成片本身的版权属于作者，本仓库不对其重新授权。
