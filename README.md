@@ -3,7 +3,7 @@
 [![Gallery](https://img.shields.io/badge/Browse%20789%20prompts%20with%20video-F5FF60?labelColor=111)](https://apimodels.app/seedance-2-5-prompts)
 [![One API](https://img.shields.io/badge/One%20API-85%2B%20models-3158E8)](https://apimodels.app/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20live-from%20%240.120%2Fs-1f9e5f)](https://apimodels.app/models/seedance-2.5)
-[![Reference images](https://img.shields.io/badge/Reference%20images-from%20%240.008-8b5cf6)](#the-reference-images-have-to-come-from-somewhere)
+[![Reference images](https://img.shields.io/badge/Reference%20images-from%20%240.01-8b5cf6)](#the-reference-images-have-to-come-from-somewhere)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 Awesome Seedance 2.5 Prompts is a library of **789 Seedance 2.5 video prompts**: 783 published by 199 creators on X and Civitai and quoted in full with credit and a link to the original post, plus 6 reconstructions written by us from finished clips. Nine of them are showcased below next to the clip each produced, followed by a prompting guide.
@@ -258,7 +258,7 @@ a one-string change:
 | [Seedance 2.0 Fast](https://apimodels.app/models/seedance-2.0-fast) | **$0.071** / s | Same capability, speed/cost tier |
 | [Seedance 2.0 Mini](https://apimodels.app/models/seedance-2.0-mini) | **$0.044** / s | Most affordable Seedance tier |
 | [Dreamina Seedance 2.0](https://apimodels.app/models/dreamina-seedance-2-0) | per second | International line, native up to 4K 10-bit |
-| **[MiniMax H3](https://apimodels.app/models/minimax-h3)** | **$0.145** / s | Native 2K + synced audio, 9 ref images + 3 videos + 3 audio |
+| **[MiniMax H3](https://apimodels.app/models/minimax-h3)** | **$0.097** / s | 768p from $0.097/s, native 2K $0.145/s, synced audio, 9 ref images + 3 videos + 3 audio |
 | **[Kling V3](https://apimodels.app/models/kling-v3)** | **$0.12** / s | 3–15 s, text- and image-to-video, optional audio |
 | [VEO 3.1](https://apimodels.app/models/veo-3.1) | per clip | Premium standard tier |
 
@@ -277,8 +277,8 @@ upscaler anywhere in the path, and only a render that succeeds is charged.
 | Model | API string | 1K | 2K | 4K |
 |---|---|---|---|---|
 | **[GPT Image 2](https://apimodels.app/models/gpt-image-2)** | `gpt-image-2` | **$0.025** | $0.03 | $0.05 |
-| [GPT Image 2 Lite](https://apimodels.app/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.008** | $0.015 | $0.025 |
-| **[Nano Banana Pro](https://apimodels.app/models/nanobananapro)** (Gemini 3 Pro Image) | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
+| [GPT Image 2 Lite](https://apimodels.app/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.01** | — | — |
+| **[Nano Banana Pro](https://apimodels.app/models/nanobananapro)** (Gemini 3 Pro Image) | `gemini-3-pro-image-preview` | **$0.068** | $0.068 | $0.13 |
 | [Nano Banana 2](https://apimodels.app/models/nanobanana2) (Gemini 3.1 Flash Image) | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
 
 **Faces are the exception, and it is worth knowing this before you spend a render.**

@@ -8,7 +8,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 1. Thirty-second selfie day-in-the-life
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-cb233d1612918f6dd6c62fa87"><img src="../assets/previews/thirty-second-selfie-day-in-the-life.jpg" alt="Thirty-second selfie day-in-the-life" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-cb233d1612918f6dd6c62fa87"><img src="https://pbs.twimg.com/amplify_video_thumb/2083560762686181376/img/scEB8FUnBnElyV7c.jpg" alt="Thirty-second selfie day-in-the-life" width="700" /></a>
 
 <strong>Prompt</strong> — [GOAL] Generate a 30-second first-person phone vlog. The core subject is <WOMAN>, in her late twenties, shoulder-length dark brown hair, light natural makeup, who films herself at arm's length through one ordinary day. T…
 
@@ -22,7 +22,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 2. Handheld DV morning dog-walk vlog
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-cf387801f8c35408450aff56f"><img src="../assets/previews/handheld-dv-morning-dog-walk-vlog.jpg" alt="Handheld DV morning dog-walk vlog" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-cf387801f8c35408450aff56f"><img src="https://pbs.twimg.com/amplify_video_thumb/2085417535650820096/img/aZuUimW67xW4-upN.jpg" alt="Handheld DV morning dog-walk vlog" width="700" /></a>
 
 <strong>Prompt</strong> — CAMERA: Handheld DV 16mm daily vlog footage. The video MUST begin with her holding the camera at arm's length in selfie mode while stepping outside her apartment building with her dog. The first 20–30 seconds are entirel…
 
@@ -35,7 +35,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 3. Seven-shot bedroom candid — cat, phone call, doorbell
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c50b543be1ee8d4b7e609bbc0"><img src="../assets/previews/seven-shot-bedroom-candid-cat-call-doorbell.jpg" alt="Seven-shot bedroom candid — cat, phone call, doorbell" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c50b543be1ee8d4b7e609bbc0"><img src="https://pbs.twimg.com/amplify_video_thumb/2085640247682224128/img/Wj08brZzXojtfWtv.jpg" alt="Seven-shot bedroom candid — cat, phone call, doorbell" width="700" /></a>
 
 <strong>Prompt</strong> — Montage, multi-shot candid observational footage. Do not use a single camera angle or continuous take. Handheld documentary style with the feeling of accidental real-life capture. Slightly imperfect framing, subtle handh…
 
@@ -48,7 +48,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 4. Thirty seconds of hand-to-hand combat in a rain-flooded metro maintenance hall
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-ccc25e6fc74a17881b0973efa"><img src="../assets/previews/rain-flooded-metro-station-hand-to-hand-fight.jpg" alt="Thirty seconds of hand-to-hand combat in a rain-flooded metro maintenance hall" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-ccc25e6fc74a17881b0973efa"><img src="https://pbs.twimg.com/amplify_video_thumb/2083521731181084672/img/dP7DwWxjKsAmuRFg.jpg" alt="Thirty seconds of hand-to-hand combat in a rain-flooded metro maintenance hall" width="700" /></a>
 
 <strong>Prompt</strong> — 生成一段完整30秒、16:9横屏、24fps、写实电影级质感的现代近身格斗视频。使用我上传的两组人物参考图：第一名人物固定为"主角"，第二名人物固定为"敌人"。严格继承参考图中两人的面部、年龄、发型、体型、身高比例、服装、鞋子、配饰和整体气质。全程不得交换身份，不得变脸、改变服装颜色、改变体型或生成第三名参战者。 【核心风格】 参考《一个人的武林》所呈现的现代硬派武术电影气质：动作迅猛、贴身、凶狠，攻防转换极快，拳脚具有真实接触感和明确…
 
@@ -61,7 +61,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 5. Silhouette transformation in a lightning void
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c97a008aa714f8203046fcc07"><img src="../assets/previews/lightning-sorceress-transformation.jpg" alt="Silhouette transformation in a lightning void" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c97a008aa714f8203046fcc07"><img src="https://pbs.twimg.com/ext_tw_video_thumb/2083976122924994560/pu/img/falNzbsCnfcAzSKf.jpg" alt="Silhouette transformation in a lightning void" width="700" /></a>
 
 <strong>Prompt</strong> — [GOAL] Generate a 30-second transformation sequence. The core subject is <FIGURE>, a human form kept as a near-total silhouette from the first frame to the last. The main event is <FIGURE> walking out of a dark storm voi…
 
@@ -73,7 +73,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 ---
 ### 6. Building breakfast inside a frozen diner
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c08cbbfc06a309699875c0d2d"><img src="../assets/previews/frozen-diner-breakfast-heist.jpg" alt="Building breakfast inside a frozen diner" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c08cbbfc06a309699875c0d2d"><img src="https://pbs.twimg.com/amplify_video_thumb/2085313344488001536/img/yTM2Ou5KM1y9Qslc.jpg" alt="Building breakfast inside a frozen diner" width="700" /></a>
 
 <strong>Prompt</strong> — <MAN>, bald with a full dark beard, black hoodie and black sunglasses, walks the length of an American roadside diner in which everything except him is frozen in mid-air, assembling and eating a breakfast sandwich out of…
 
@@ -87,7 +87,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 7. The cat that has changed pose every time she walks past
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c1e06ba0fe1177288153c5816"><img src="../assets/previews/the-cat-that-changes-pose-every-time.jpg" alt="The cat that has changed pose every time she walks past" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c1e06ba0fe1177288153c5816"><img src="https://pbs.twimg.com/amplify_video_thumb/2085349238607921152/img/Ck-Qbj22WDPqyoUR.jpg" alt="The cat that has changed pose every time she walks past" width="700" /></a>
 
 <strong>Prompt</strong> — A girl carries a stack of books along the wooden corridor of an old Japanese house on a summer afternoon, passing the same sleeping cat four times; the cat is in a completely different sleeping position each time, and sh…
 
@@ -101,7 +101,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 8. The rice that rode the belt looking for its topping
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c82040b18cad435259556cd3e"><img src="../assets/previews/conveyor-sushi-rice-finds-its-match.jpg" alt="The rice that rode the belt looking for its topping" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c82040b18cad435259556cd3e"><img src="https://pbs.twimg.com/amplify_video_thumb/2085219821986480128/img/w73R2-oNKeFIGZF0.jpg" alt="The rice that rode the belt looking for its topping" width="700" /></a>
 
 <strong>Prompt</strong> — [GOAL] Generate a 30-second animated brand film for a conveyor-belt sushi restaurant. The core subject is <SHARI>, a palm-sized ball of vinegared sushi rice with a simple drawn face, blush cheeks and two stubby feet, rid…
 
@@ -115,7 +115,7 @@ Every prompt with the clip it produced, credited and linked. Prompts the creator
 
 ### 9. Red-hooded armoured soldier walking out of desert ruins
 
-<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c1dae66061e5fca644483b51e"><img src="../assets/previews/red-hooded-mech-soldier-in-desert-ruins.jpg" alt="Red-hooded armoured soldier walking out of desert ruins" width="700" /></a>
+<a href="https://apimodels.app/seedance-2-5-prompts#prompt-c1dae66061e5fca644483b51e"><img src="https://pbs.twimg.com/ext_tw_video_thumb/2084217859979239424/pu/img/zZdEfBjg8X1rDqlH.jpg" alt="Red-hooded armoured soldier walking out of desert ruins" width="700" /></a>
 
 <strong>Prompt</strong> — @image1 supplies <SOLDIER>'s armour design, colour breakdown and silhouette: chipped bone-white and gunmetal plating, a heavy respirator faceplate with a single narrow red visor slit, and a sun-bleached crimson hood and…
 

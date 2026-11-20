@@ -6,7 +6,7 @@
 - **Source:** [@hahazwei](https://x.com/hahazwei/status/2085219893180563470) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-c82040b18cad435259556cd3e
 
-![The rice that rode the belt looking for its topping](../../assets/previews/conveyor-sushi-rice-finds-its-match.gif)
+[![The rice that rode the belt looking for its topping](https://pbs.twimg.com/amplify_video_thumb/2085219821986480128/img/w73R2-oNKeFIGZF0.jpg)](https://apimodels.app/seedance-2-5-prompts#prompt-c82040b18cad435259556cd3e)
 
 ## Why this one is worth reading
 
@@ -42,7 +42,7 @@ The camera stays at rice height on a slow parallel dolly for the first two stage
 Sound includes the low hum and rubber tick of the conveyor, plates knocking gently, a light playful ukulele-and-marimba cue that lands its first downbeat on the tuna slice, small non-verbal squeaks from <SHARI>, and no dialogue.
 ```
 
-**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.120/s at 480p, $0.270/s at 720p, billed on real token usage and charged only on success.
 
 ```bash
 curl -X POST https://apimodels.app/api/v1/video/generations \
@@ -50,9 +50,9 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
   -d '{"model":"seedance-2.5","prompt":"<the prompt above>","duration":30,"resolution":"480p"}'
 ```
 
-Nothing to prepare — this spot is text-only. At 30 s that is $4.02 at 480p and $9.00 at 720p; `duration` (4–30 s in one pass, or `-1` to let the model choose) is what moves the bill. The API exposes 480p and 720p only.
+Nothing to prepare — this spot is text-only. At 30 s that is $3.60 at 480p and $8.10 at 720p; `duration` (4–30 s in one pass, or `-1` to let the model choose) is what moves the bill. The API exposes 480p and 720p only.
 
-If your own spot needs a pack shot or a style board first, `gpt-image-2` ($0.025/image) or `gpt-image-2-lite` ($0.008) run on the same key. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+If your own spot needs a pack shot or a style board first, `gpt-image-2` ($0.025/image) or `gpt-image-2-lite` ($0.01, one fixed size) run on the same key. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
 
 ## 提示词(中文)
 
@@ -86,8 +86,8 @@ If your own spot needs a pack shot or a style board first, `gpt-image-2` ($0.025
 
 ---
 
-> 这条的中文说明:作者说明**完全没给参考图**，纯文字一气呵成 30 秒。这条值得单独验证的正是这一点：整支片子的角色一致性只靠描述撑住。
+这条的中文说明:作者说明**完全没给参考图**，纯文字一气呵成 30 秒。这条值得单独验证的正是这一点：整支片子的角色一致性只靠描述撑住。
 
-**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.120/秒、720p $0.270/秒，按真实用量计费，只在成功时扣费。
 
-这条不用备任何素材，纯文字。30 秒 480p 约 $4.02、720p 约 $9.00，`duration` 才是账单的开关（单次 4–30 秒，或填 `-1` 让模型自己定）；API 只开放 480p 和 720p。要给自己的广告先做产品图或风格板，同一把 key 可调 `gpt-image-2`（$0.025/张）或 `gpt-image-2-lite`（$0.008/张）。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)
+这条不用备任何素材，纯文字。30 秒 480p 约 $3.60、720p 约 $8.10，`duration` 才是账单的开关（单次 4–30 秒，或填 `-1` 让模型自己定）；API 只开放 480p 和 720p。要给自己的广告先做产品图或风格板，同一把 key 可调 `gpt-image-2`（$0.025/张）或 `gpt-image-2-lite`（$0.01/张，固定一种尺寸）。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)

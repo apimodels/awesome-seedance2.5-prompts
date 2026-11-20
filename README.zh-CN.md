@@ -3,7 +3,7 @@
 [![画廊](https://img.shields.io/badge/789%20条提示词%20·%20带成片-F5FF60?labelColor=111)](https://apimodels.app/zh/seedance-2-5-prompts)
 [![一个 API](https://img.shields.io/badge/一个%20API-85%2B%20模型-3158E8)](https://apimodels.app/zh/models)
 [![Seedance 2.5](https://img.shields.io/badge/Seedance%202.5%20已上线-%240.120%2F秒起-1f9e5f)](https://apimodels.app/zh/models/seedance-2.5)
-[![参考图](https://img.shields.io/badge/参考图-%240.008%2F张起-8b5cf6)](#参考图总得先有)
+[![参考图](https://img.shields.io/badge/参考图-%240.01%2F张起-8b5cf6)](#参考图总得先有)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 本仓库收录 **789 条 Seedance 2.5 视频提示词**：783 条是 199 位作者在 X 和 Civitai 上公开的原文，逐字全文收录、署名并附原帖链接，另有 6 条是我们根据成片反推的；其中 9 条在下面精选展示，配着各自的成片，另附一份写法指南。
@@ -235,7 +235,7 @@
 | [Seedance 2.0 Fast](https://apimodels.app/zh/models/seedance-2.0-fast) | **$0.071** / 秒 | 能力相同的速度/成本档 |
 | [Seedance 2.0 Mini](https://apimodels.app/zh/models/seedance-2.0-mini) | **$0.044** / 秒 | Seedance 家族里起价最低的一档 |
 | [Dreamina Seedance 2.0](https://apimodels.app/zh/models/dreamina-seedance-2-0) | 按秒 | 国际线，原生最高 4K |
-| **[MiniMax H3](https://apimodels.app/zh/models/minimax-h3)** | **$0.145** / 秒 | 原生 2K + 同步音频，9 图 + 3 视频 + 3 音频 |
+| **[MiniMax H3](https://apimodels.app/zh/models/minimax-h3)** | **$0.097** / 秒 | 768p 起 $0.097/秒，原生 2K $0.145/秒，同步音频，9 图 + 3 视频 + 3 音频 |
 | **[Kling V3](https://apimodels.app/zh/models/kling-v3)** | **$0.12** / 秒 | 3–15 秒，文生/图生视频，可选音频 |
 | [VEO 3.1](https://apimodels.app/zh/models/veo-3.1) | 按条 | 高端标准档 |
 
@@ -253,8 +253,8 @@ Seedance 2.5 单个任务最多吃 **30 张参考图**，而本库大半的提�
 | 模型 | 调用名 | 1K | 2K | 4K |
 |---|---|---|---|---|
 | **[GPT Image 2](https://apimodels.app/zh/models/gpt-image-2)** | `gpt-image-2` | **$0.025** | $0.03 | $0.05 |
-| [GPT Image 2 Lite](https://apimodels.app/zh/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.008** | $0.015 | $0.025 |
-| **[Nano Banana Pro](https://apimodels.app/zh/models/nanobananapro)**（Gemini 3 Pro Image） | `gemini-3-pro-image-preview` | **$0.06** | $0.06 | $0.12 |
+| [GPT Image 2 Lite](https://apimodels.app/zh/models/gpt-image-2-lite) | `gpt-image-2-lite` | **$0.01** | — | — |
+| **[Nano Banana Pro](https://apimodels.app/zh/models/nanobananapro)**（Gemini 3 Pro Image） | `gemini-3-pro-image-preview` | **$0.068** | $0.068 | $0.13 |
 | [Nano Banana 2](https://apimodels.app/zh/models/nanobanana2)（Gemini 3.1 Flash Image） | `gemini-3.1-flash-image-preview` | **$0.05** | $0.05 | $0.08 |
 
 **人脸是例外，这条最好在花钱之前就知道。**

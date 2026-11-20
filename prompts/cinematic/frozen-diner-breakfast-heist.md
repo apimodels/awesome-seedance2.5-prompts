@@ -6,7 +6,7 @@
 - **Source:** [@TechHalla](https://x.com/techhalla/status/2085313653662707968) — video by its author, linked for reference
 - **In the gallery:** https://apimodels.app/seedance-2-5-prompts#prompt-c08cbbfc06a309699875c0d2d
 
-![Building breakfast inside a frozen diner](../../assets/previews/frozen-diner-breakfast-heist.gif)
+[![Building breakfast inside a frozen diner](https://pbs.twimg.com/amplify_video_thumb/2085313344488001536/img/yTM2Ou5KM1y9Qslc.jpg)](https://apimodels.app/seedance-2-5-prompts#prompt-c08cbbfc06a309699875c0d2d)
 
 ## Why this one is worth reading
 
@@ -28,7 +28,7 @@ The camera dollies backwards ahead of <MAN> at chest height for the whole walk, 
 Sound includes room tone with all diner noise removed the moment the freeze begins, only <MAN>'s footsteps, his breathing and the sound of eating, then the full crash of plates, spilling coffee and startled voices arriving in one hit as the door closes. No music, no dialogue.
 ```
 
-**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.134/s at 480p, $0.300/s at 720p, billed on real token usage and charged only on success.
+**Run it** — Seedance 2.5 is live on apimodels.app as `seedance-2.5`: $0.120/s at 480p, $0.270/s at 720p, billed on real token usage and charged only on success.
 
 ```bash
 curl -X POST https://apimodels.app/api/v1/video/generations \
@@ -36,7 +36,7 @@ curl -X POST https://apimodels.app/api/v1/video/generations \
   -d '{"model":"seedance-2.5","prompt":"<the prompt above>","duration":30,"resolution":"480p"}'
 ```
 
-This clip is 30 s, and `duration` is the knob that moves the bill — $4.02 at 480p, $9.00 at 720p (4–30 s in one pass, or `-1` to let the model choose). The API exposes 480p and 720p only. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
+This clip is 30 s, and `duration` is the knob that moves the bill — $3.60 at 480p, $8.10 at 720p (4–30 s in one pass, or `-1` to let the model choose). The API exposes 480p and 720p only. [Docs](https://apimodels.app/docs/seedance-2-5) · [model](https://apimodels.app/models/seedance-2.5)
 
 ## 提示词(中文)
 
@@ -56,8 +56,8 @@ This clip is 30 s, and `duration` is the knob that moves the bill — $4.02 at 4
 
 ---
 
-> 这条的中文说明:难的不是定格，是被定格的东西必须真的不动。模型会漂。把这点直说出来——不漂移、不晃动、没有任何微动——比任何「时间静止」的形容词都管用。
+这条的中文说明:难的不是定格，是被定格的东西必须真的不动。模型会漂。把这点直说出来——不漂移、不晃动、没有任何微动——比任何「时间静止」的形容词都管用。
 
-**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.134/秒、720p $0.300/秒，按真实用量计费，只在成功时扣费。
+**用 API 跑这条** — `seedance-2.5` 已在 apimodels.app 上线，命令同上：480p $0.120/秒、720p $0.270/秒，按真实用量计费，只在成功时扣费。
 
-这条是 30 秒，`duration` 才是账单的开关——480p 约 $4.02，720p 约 $9.00（单次 4–30 秒，或填 `-1` 让模型自己定）。API 只开放 480p 和 720p。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)
+这条是 30 秒，`duration` 才是账单的开关——480p 约 $3.60，720p 约 $8.10（单次 4–30 秒，或填 `-1` 让模型自己定）。API 只开放 480p 和 720p。文档：[/docs/seedance-2-5](https://apimodels.app/docs/seedance-2-5)
